@@ -1,0 +1,8 @@
+// REMOVE CHAKRA UI STYLE
+.markdownPreviewContainer {
+    all: revert;
+    width: 100%;
+    * {
+        all: revert;
+    }
+}

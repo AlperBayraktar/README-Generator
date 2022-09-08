@@ -1,25 +1,25 @@
 {
-  "name": "markdowner",
-  "plugins": [
-    {
-      "name": "Chakra UI",
-      "description": "Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
-      "url": "https://chakra-ui.com/docs/getting-started"
-    },
-    {
-      "name": "CSS / styled-jsx",
-      "description": "Next.js comes with built-in support for CSS and styled-jsx. Styled-jsx is full, scoped and component-friendly CSS support for JSX (rendered on the server or the client).",
-      "url": "https://github.com/vercel/styled-jsx"
-    },
-    {
-      "name": "Environment Variables",
-      "description": "Use environment variables in your next.js project for server side, client or both.",
-      "url": "https://github.com/vercel/next.js/tree/canary/examples/environment-variables"
-    },
-    {
-      "name": "next-i18next",
-      "description": "next-i18next is a plugin for Next.js projects that allows you to get translations up and running quickly and easily, while fully supporting SSR, multiple namespaces with codesplitting, etc.",
-      "url": "https://github.com/isaachinman/next-i18next"
-    }
-  ]
+    "name": "readme-generator",
+    "plugins": [
+        {
+            "name": "Chakra UI",
+            "description": "Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
+            "url": "https://chakra-ui.com/docs/getting-started"
+        },
+        {
+            "name": "CSS / styled-jsx",
+            "description": "Next.js comes with built-in support for CSS and styled-jsx. Styled-jsx is full, scoped and component-friendly CSS support for JSX (rendered on the server or the client).",
+            "url": "https://github.com/vercel/styled-jsx"
+        },
+        {
+            "name": "Environment Variables",
+            "description": "Use environment variables in your next.js project for server side, client or both.",
+            "url": "https://github.com/vercel/next.js/tree/canary/examples/environment-variables"
+        },
+        {
+            "name": "next-i18next",
+            "description": "next-i18next is a plugin for Next.js projects that allows you to get translations up and running quickly and easily, while fully supporting SSR, multiple namespaces with codesplitting, etc.",
+            "url": "https://github.com/isaachinman/next-i18next"
+        }
+    ]
 }

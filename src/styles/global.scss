@@ -1,0 +1,37 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Typewriter Animation */
+.typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid #ffa500;
+    white-space: nowrap;
+    animation: typing 6s ease infinite, blink 1.2s ease;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    60% {
+        width: 100%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    20% {
+        border-color: orange;
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "title": "Bilgi",
+    "iWantToLearnAbout": "... hakkında bilgi edinmek istiyorum",
+    "usingReadmeGenerator": "Readme Generator'ı kullanmak",
+    "projectAsDeveloper": "Projenin yazılım tarafı",
+    "goHome": "Ana sayfa",
+    "goBack": "Geri",
+    "goToWizard": "Oluşturucuya git",
+    "comingSoon": "YAKINDA...",
+
+    "aboutProject": {
+        "title": "Readme Generator Hakkında",
+        "description": "Bu proje 19 Ağustos 2022 tarihinde <chakralink>{{name}}</chakralink> tarafından başlatılmıştır."
+    }
+}

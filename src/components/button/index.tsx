@@ -1,12 +1,13 @@
 import React from "react";
-import { Button as BaseButton, ButtonProps } from "@chakra-ui/react";
+import { ButtonProps } from "@chakra-ui/button/src/button";
+import { Button as ChakraButton } from "@chakra-ui/react";
 
-export type IButton = ButtonProps;
-
-export const Button: React.FC<IButton> = ({ ...rest }) => {
-  return (
-    <div>
-      <BaseButton {...rest} />
-    </div>
-  );
+const Button: React.FC<ButtonProps> = (props) => {
+    return (
+        <ChakraButton bg={"blue.800"} _hover={{ bg: "blue.600" }} {...props}>
+            {props.children}
+        </ChakraButton>
+    );
 };
+
+export default Button;

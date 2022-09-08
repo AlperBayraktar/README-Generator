@@ -1,0 +1,15 @@
+{
+    "title": "Information",
+    "iWantToLearnAbout": "I want to learn about...",
+    "usingReadmeGenerator": "Using Readme Generator",
+    "projectAsDeveloper": "Project as a developer",
+    "goHome": "Go home",
+    "goBack": "Go back",
+    "goToWizard": "Go to wizard",
+    "comingSoon": "COMING SOON...",
+
+    "aboutProject": {
+        "title": "About Readme Generator",
+        "description": "This project was started on 19 August 2022 by <chakralink>{{name}}</chakralink>."
+    }
+}

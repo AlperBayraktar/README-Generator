@@ -1,3 +1,5 @@
+# Added by superplate
+
 # npm
 node_modules
 # next.js build files
@@ -6,3 +8,7 @@ node_modules
 .env
 .env.*
 !.env.example
+
+# ---------------------------
+
+alper-plan.txt

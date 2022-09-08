@@ -1,66 +1,50 @@
-# markdowner
+# README Generator (In Development)
 
+Readme Generator is a website that gives you suitable and efficient templates for your README.md files.
 
-This project was generated with [superplate](https://github.com/pankod/superplate).
+## Badges
 
-## Getting Started
+[![MIT LICENSE](https://img.shields.io/badge/license-MIT-green)](https://github.com/AlperBayraktar/README-Generator/blob/master/LICENSE)
 
-superplate is a Next.js all-in-one project generator. Create your project with the tools you need without spending hours on setting them up.
+## Contributing
 
-## Available Scripts
+Contributions are always welcome!d
 
-### Running the development server.
+See `CONTRIBUTING.md` for ways to get started.
 
-```bash
-    yarn dev
-```
+## Install & Run
 
-### Building for production.
-
-```bash
-    yarn build
-```
-
-### Running the production server.
+### Clone README Generator
 
 ```bash
-    yarn start
+  git clone https://github.com/AlperBayraktar/README-Generator.git
+  cd README-Generator
 ```
 
-## Learn More
+### Install dependencies
 
-To learn more about **superplate**, please check out the [Documentation](https://github.com/pankod/superplate).
+```bash
+  yarn install
+```
 
+### Run locally
 
-### **Chakra UI**
+```bash
+  yarn dev
+```
 
-Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.
+🎉App is now ready on port 3000🎉
 
-[Go To Documentation](https://chakra-ui.com/docs/getting-started)
+## Tech Stack
 
+**Client:**
 
-### **CSS / styled-jsx**
+-   Next.js
+-   React
+-   Chakra UI
 
-Next.js comes with built-in support for CSS and styled-jsx. Styled-jsx is full, scoped and component-friendly CSS support for JSX (rendered on the server or the client).
+**Server:**
 
-[Go To Documentation](https://github.com/vercel/styled-jsx)
+-   Next.js
 
-
-### **Environment Variables**
-
-Use environment variables in your next.js project for server side, client or both.
-
-[Go To Documentation](https://github.com/vercel/next.js/tree/canary/examples/environment-variables)
-
-
-### **next-i18next**
-
-next-i18next is a plugin for Next.js projects that allows you to get translations up and running quickly and easily, while fully supporting SSR, multiple namespaces with codesplitting, etc.
-
-[Go To Documentation](https://github.com/isaachinman/next-i18next)
-
-
-
-## License
-
-MIT
+This project was created with ⭐[Superplate CLI](https://pankod.github.io/superplate/)⭐
