@@ -1,10 +1,9 @@
 import { extendTheme } from "@chakra-ui/react";
-import styles from "./styles";
+import { config, styles } from "./config";
 
-const overrides = {
+const theme = extendTheme({
+    config: config,
     ...styles,
-};
-
-const theme = extendTheme(overrides);
+});
 
 export default theme;

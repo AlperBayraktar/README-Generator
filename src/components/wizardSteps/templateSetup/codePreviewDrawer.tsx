@@ -47,7 +47,7 @@ const CodePreviewDrawer: React.FC<ICodePreviewDrawer> = ({
             size="lg"
         >
             <DrawerOverlay />
-            <DrawerContent backgroundColor="gray.700" color="white">
+            <DrawerContent backgroundColor="gray.700" olor="white">
                 <DrawerCloseButton />
                 <DrawerHeader>
                     <Heading fontSize={"4xl"} textAlign="center">
@@ -56,7 +56,7 @@ const CodePreviewDrawer: React.FC<ICodePreviewDrawer> = ({
                 </DrawerHeader>
                 <DrawerBody>
                     {markdownCodeToHTML.replaceAll("<br />", "") === "" ? (
-                        <Alert status="info" color="black">
+                        <Alert status="info">
                             <AlertIcon />
                             No markdown generated yet :)
                         </Alert>

@@ -13,6 +13,7 @@ import NextLink from "next/link";
 import getLanguageProps from "@components/helpers/getLanguageProps";
 import { NextPage } from "next";
 import { useTranslation } from "next-i18next";
+import LanguagePicker from "@components/languagePicker";
 
 const Index: NextPage = () => {
     const { t } = useTranslation("index");
@@ -58,6 +59,7 @@ const Index: NextPage = () => {
                 </Link>
                 )
             </p>
+            <LanguagePicker />
             <VStack
                 w={"full"}
                 justify={"center"}
@@ -86,9 +88,11 @@ const Index: NextPage = () => {
                     </Text>
                     <Stack direction={"row"}>
                         <NextLink href="/wizard">
-                            <Button width={250} rounded="full">
-                                {t("letsStart")}
-                            </Button>
+                            <>
+                                <Button width={250} rounded="full">
+                                    {t("letsStart")}
+                                </Button>
+                            </>
                         </NextLink>
 
                         <NextLink href="/info">

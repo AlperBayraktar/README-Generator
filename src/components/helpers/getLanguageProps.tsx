@@ -8,6 +8,11 @@ const getLanguageProps = (
 ) => {
     const getStaticProps = async ({ locale }: any) => {
         const result: Object = extraReturn();
+
+        if (!requiredNamespaces.includes("common")) {
+            requiredNamespaces.push("common");
+        }
+
         return {
             ...result,
             props: {

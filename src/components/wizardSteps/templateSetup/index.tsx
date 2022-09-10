@@ -115,7 +115,7 @@ const TemplateSetup: React.FC<ITemplateSetup> = ({ projectType }) => {
             <Flex flexDir="row" width="96vw" columnGap={5} m="auto" mb={8}>
                 <Container
                     maxW="50%"
-                    bg="gray.600"
+                    backgroundColor="gray.700"
                     padding="8"
                     borderRadius="8"
                     centerContent
@@ -157,8 +157,8 @@ const TemplateSetup: React.FC<ITemplateSetup> = ({ projectType }) => {
                             </AlertTitle>
                             <AlertDescription maxWidth="sm">
                                 You can copy/install your{" "}
-                                <Kbd color="black">README.md</Kbd> or go back
-                                using the buttons below
+                                <Kbd backgroundColor="green.500">README.md</Kbd>{" "}
+                                or go back using the buttons below
                             </AlertDescription>
                         </Alert>
                     )}

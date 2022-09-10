@@ -1,4 +1,4 @@
-import { ThemeOverride } from "@chakra-ui/react";
+import { type ThemeConfig, ThemeOverride } from "@chakra-ui/react";
 import { StepsStyleConfig } from "chakra-ui-steps";
 
 type GlobalStyles = Pick<ThemeOverride, "styles">;
@@ -12,15 +12,11 @@ const CustomSteps = {
                 ...StepsStyleConfig.baseStyle(props).label,
                 color: "#ffffff",
             },
-            iconLabel: {
-                ...StepsStyleConfig.baseStyle(props).iconLabel,
-                color: "#000",
-            },
         };
     },
 };
 
-export default {
+const styles: GlobalStyles = {
     styles: {
         global: {
             body: {
@@ -48,3 +44,10 @@ export default {
         },
     },
 } as GlobalStyles;
+
+const config: ThemeConfig = {
+    initialColorMode: "dark",
+    useSystemColorMode: false,
+};
+
+export { config, styles };

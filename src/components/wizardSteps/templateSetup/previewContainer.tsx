@@ -13,7 +13,7 @@ const PreviewContainer: React.FC<IPreviewContainer> = ({ markdownCode }) => {
             maxW="50%"
             bg="gray.600"
             borderRadius="8"
-
+            backgroundColor="gray.700"
             centerContent
         >
             <ReactMarkdown

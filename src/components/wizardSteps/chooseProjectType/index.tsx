@@ -9,7 +9,7 @@ const ChooseProjectType: React.FC<any> = ({
 }) => (
     <Container
         maxW="60%"
-        bg="gray.600"
+        backgroundColor="gray.700"
         padding="8"
         borderRadius="8"
         centerContent
