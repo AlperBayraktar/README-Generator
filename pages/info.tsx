@@ -1,5 +1,5 @@
 import getLanguageProps from "@components/helpers/getLanguageProps";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { NextPage } from "next";
 import NextLink from "next/link";
 import {
@@ -8,12 +8,21 @@ import {
     Flex,
     Link as ChakraLink,
     Divider,
+    Button,
 } from "@chakra-ui/react";
-import GhostButton from "@components/Button/ghostButton";
-import InfoChoiceContainer from "@components/info/infoChoiceContainer";
+import InfoChoiceContainer from "@components/info";
 import UsageInfo from "@components/info/usageInfo";
 import ProjectInfo from "@components/info/projectInfo";
 import { useTranslation } from "next-i18next";
+import { ButtonProps } from "@chakra-ui/button/src/button";
+
+const GhostButton: React.FC<ButtonProps> = (props) => {
+    return (
+        <Button colorScheme="blue" variant="ghost" {...props}>
+            {props.children}
+        </Button>
+    );
+};
 
 const InfoContainersFooter = ({ t, setInfoChoice }: any) => (
     <Flex height="2rem" alignItems="center" mt={2}>

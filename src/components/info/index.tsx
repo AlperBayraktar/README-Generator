@@ -5,9 +5,8 @@ import {
     Text,
     VStack,
     Link as ChakraLink,
-    Button as ChakraButton,
+    Button,
 } from "@chakra-ui/react";
-import Button from "@components/Button";
 
 interface IInfoChoiceContainer {
     setInfoChoice: Function;
@@ -40,9 +39,9 @@ const InfoChoiceContainer: React.FC<IInfoChoiceContainer> = ({
                 </Button>
                 <NextLink href="/" passHref>
                     <ChakraLink>
-                        <ChakraButton variant="ghost" _hover={{ bg: "" }}>
+                        <Button variant="ghost" _hover={{ bg: "" }}>
                             {t("goBack")}
-                        </ChakraButton>
+                        </Button>
                     </ChakraLink>
                 </NextLink>
             </VStack>

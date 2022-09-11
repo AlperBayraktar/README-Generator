@@ -7,18 +7,16 @@ import {
     Flex,
     Container,
     Grid,
-    GridItem,
     useDisclosure,
     Alert,
     AlertIcon,
     AlertTitle,
     AlertDescription,
     Kbd,
-    Button as ChakraButton,
+    Button,
 } from "@chakra-ui/react";
 import PreviewContainer from "./previewContainer";
 import CodePreviewModal from "./codePreviewDrawer";
-import Button from "@components/Button";
 
 interface ITemplateSetup {
     projectType: string;
@@ -87,34 +85,28 @@ const TemplateSetup: React.FC<ITemplateSetup> = ({
                     {section.footerBeforeSubmitBtn}
 
                     <Grid templateColumns="repeat(2, 1fr)" gap={2}>
-                        <ChakraButton
+                        <Button
                             isDisabled={activeStep === 0}
                             onClick={prevStep}
                             width="100%"
                         >
                             Prev
-                        </ChakraButton>
+                        </Button>
 
-                        <ChakraButton onClick={nextStep} width="100%">
+                        <Button onClick={nextStep} width="100%">
                             {activeStep ===
                             TemplateSectionOrders[projectType].length - 1
                                 ? "Finish"
                                 : "Next"}
-                        </ChakraButton>
+                        </Button>
 
-                        <ChakraButton
-                            onClick={markdownModal.onOpen}
-                            width="100%"
-                        >
+                        <Button onClick={markdownModal.onOpen} width="100%">
                             View generated markdown code
-                        </ChakraButton>
+                        </Button>
 
-                        <ChakraButton
-                            onClick={goToProjectTypeSelection}
-                            width="100%"
-                        >
+                        <Button onClick={goToProjectTypeSelection} width="100%">
                             Choose project type again
-                        </ChakraButton>
+                        </Button>
                     </Grid>
 
                     {section.footerAfterSubmitBtn}

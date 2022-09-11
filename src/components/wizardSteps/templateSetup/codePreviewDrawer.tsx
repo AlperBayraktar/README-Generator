@@ -13,8 +13,8 @@ import {
     useToast,
     Alert,
     AlertIcon,
+    Button,
 } from "@chakra-ui/react";
-import Button from "@components/Button";
 interface ICodePreviewDrawer {
     disclosure: any;
     markdownCode: Object;

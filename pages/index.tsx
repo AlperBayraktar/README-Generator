@@ -8,12 +8,10 @@ import {
     Heading,
     Link as ChakraLink,
 } from "@chakra-ui/react";
-import Button from "@components/Button";
 import NextLink from "next/link";
 import getLanguageProps from "@components/helpers/getLanguageProps";
 import { NextPage } from "next";
 import { useTranslation } from "next-i18next";
-import LanguagePicker from "@components/languagePicker";
 import { Trans } from "react-i18next";
 
 const Index: NextPage = () => {

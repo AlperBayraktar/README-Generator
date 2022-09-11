@@ -1,6 +1,6 @@
 import React from "react";
 import { Heading, Grid, GridItem, Container } from "@chakra-ui/react";
-import Button from "@components/Button";
+import ProjectTypeButton from "./projectTypeButton";
 import PROJECT_TYPES from "./projectTypes";
 
 const ChooseProjectType: React.FC<any> = ({
@@ -28,7 +28,7 @@ const ChooseProjectType: React.FC<any> = ({
                 (projectType: string, typeIndex: number) => {
                     return (
                         <GridItem key={typeIndex}>
-                            <Button
+                            <ProjectTypeButton
                                 w="7rem"
                                 rounded="0"
                                 onClick={() => {
@@ -37,7 +37,7 @@ const ChooseProjectType: React.FC<any> = ({
                                 }}
                             >
                                 {projectType}
-                            </Button>
+                            </ProjectTypeButton>
                         </GridItem>
                     );
                 }
