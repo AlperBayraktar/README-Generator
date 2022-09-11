@@ -27,41 +27,44 @@ const Wizard: NextPage = () => {
 
         {
             label: "Create Template",
-            content: <TemplateSetup projectType={choosenProjectType} />,
+            content: (
+                <TemplateSetup
+                    projectType={choosenProjectType}
+                    goToProjectTypeSelection={prevStep}
+                />
+            ),
         },
     ];
 
     return (
-        <Grid alignItems={"center"} w="100%" h="100vh" m="auto">
-            <div
-                style={{
-                    width: "100%",
-                    height: "100vh",
-                }}
-            >
-                <NextLink href="/" passHref>
-                    <ChakraLink>
-                        <Heading
-                            fontSize="5xl"
-                            my={20}
-                            textAlign="center"
-                            color="green.400"
-                        >
-                            README Generator
-                        </Heading>
-                    </ChakraLink>
-                </NextLink>
-                <Flex flexDir="column">
-                    <Steps activeStep={activeStep} m="auto" mb={10} w="50%">
-                        {steps.map(({ label, content }, stepIndex: number) => (
-                            <Step label={label} key={stepIndex}>
-                                {content}
-                            </Step>
-                        ))}
-                    </Steps>
-                </Flex>
-            </div>
-        </Grid>
+        <div
+            style={{
+                width: "100vw",
+                margin: "auto",
+            }}
+        >
+            <NextLink href="/" passHref>
+                <ChakraLink>
+                    <Heading
+                        fontSize="5xl"
+                        my={20}
+                        textAlign="center"
+                        color="green.400"
+                    >
+                        README Generator
+                    </Heading>
+                </ChakraLink>
+            </NextLink>
+            <Flex flexDir="column">
+                <Steps activeStep={activeStep} m="auto" mb={10} w="50%">
+                    {steps.map(({ label, content }, stepIndex: number) => (
+                        <Step label={label} key={stepIndex}>
+                            {content}
+                        </Step>
+                    ))}
+                </Steps>
+            </Flex>
+        </div>
     );
 };
 

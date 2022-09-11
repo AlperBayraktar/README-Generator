@@ -32,6 +32,11 @@ const styles: GlobalStyles = {
     },
     components: {
         Steps: CustomSteps,
+        Button: {
+            baseStyle: {
+                whiteSpace: "normal",
+            },
+        },
     },
     Alert: {
         variants: {

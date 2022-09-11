@@ -18,7 +18,6 @@ const ChooseProjectType: React.FC<any> = ({
             Choose project type
         </Heading>
         <Grid
-            templateRows="repeat(4, 1fr)"
             templateColumns="repeat(2, 1fr)"
             gap={6}
             m="auto"

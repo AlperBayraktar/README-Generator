@@ -6,7 +6,7 @@ import {
     Button as ChakraButton,
     useBreakpointValue,
     Heading,
-    Link,
+    Link as ChakraLink,
 } from "@chakra-ui/react";
 import Button from "@components/Button";
 import NextLink from "next/link";
@@ -14,6 +14,7 @@ import getLanguageProps from "@components/helpers/getLanguageProps";
 import { NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import LanguagePicker from "@components/languagePicker";
+import { Trans } from "react-i18next";
 
 const Index: NextPage = () => {
     const { t } = useTranslation("index");
@@ -41,25 +42,28 @@ const Index: NextPage = () => {
                     fontFamily: "Monospace, courier",
                 }}
             >
-                {t("backgroundImageBy")}{" "}
-                <Link
-                    href="https://www.svgbackgrounds.com/"
-                    color="blue.200"
-                    target="_blank"
-                >
-                    svgbackgrounds.com
-                </Link>{" "}
-                (
-                <Link
-                    href="https://www.svgbackgrounds.com/license/"
-                    color="blue.200"
-                    target="_blank"
-                >
-                    {t("license")}
-                </Link>
-                )
+                <Trans
+                    t={t}
+                    i18nKey="bgDescription"
+                    components={{
+                        websitelink: (
+                            <ChakraLink
+                                href="https://www.svgbackgrounds.com/"
+                                color="blue.200"
+                                target="_blank"
+                            />
+                        ),
+                        licenselink: (
+                            <ChakraLink
+                                href="https://www.svgbackgrounds.com/license/"
+                                color="blue.200"
+                                target="_blank"
+                            />
+                        ),
+                    }}
+                />
             </p>
-            <LanguagePicker />
+            {/* <LanguagePicker /> */}
             <VStack
                 w={"full"}
                 justify={"center"}
@@ -88,11 +92,15 @@ const Index: NextPage = () => {
                     </Text>
                     <Stack direction={"row"}>
                         <NextLink href="/wizard">
-                            <>
-                                <Button width={250} rounded="full">
-                                    {t("letsStart")}
-                                </Button>
-                            </>
+                            <ChakraButton
+                                bg={"whiteAlpha.300"}
+                                rounded={"full"}
+                                width={250}
+                                backgroundColor="purple.700"
+                                _hover={{ bg: "purple.800" }}
+                            >
+                                {t("letsStart")}
+                            </ChakraButton>
                         </NextLink>
 
                         <NextLink href="/info">

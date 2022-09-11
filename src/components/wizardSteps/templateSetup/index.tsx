@@ -7,12 +7,14 @@ import {
     Flex,
     Container,
     Grid,
+    GridItem,
     useDisclosure,
     Alert,
     AlertIcon,
     AlertTitle,
     AlertDescription,
     Kbd,
+    Button as ChakraButton,
 } from "@chakra-ui/react";
 import PreviewContainer from "./previewContainer";
 import CodePreviewModal from "./codePreviewDrawer";
@@ -20,9 +22,13 @@ import Button from "@components/Button";
 
 interface ITemplateSetup {
     projectType: string;
+    goToProjectTypeSelection: any;
 }
 
-const TemplateSetup: React.FC<ITemplateSetup> = ({ projectType }) => {
+const TemplateSetup: React.FC<ITemplateSetup> = ({
+    projectType,
+    goToProjectTypeSelection,
+}) => {
     const { nextStep, prevStep, setStep, reset, activeStep } = useSteps({
         initialStep: 0,
     });
@@ -80,22 +86,36 @@ const TemplateSetup: React.FC<ITemplateSetup> = ({ projectType }) => {
 
                     {section.footerBeforeSubmitBtn}
 
-                    <Flex w="100%" columnGap={5}>
-                        <Button
+                    <Grid templateColumns="repeat(2, 1fr)" gap={2}>
+                        <ChakraButton
                             isDisabled={activeStep === 0}
                             onClick={prevStep}
-                            variant="ghost"
-                            w="100%"
+                            width="100%"
                         >
                             Prev
-                        </Button>
-                        <Button onClick={nextStep} w="100%">
+                        </ChakraButton>
+
+                        <ChakraButton onClick={nextStep} width="100%">
                             {activeStep ===
                             TemplateSectionOrders[projectType].length - 1
                                 ? "Finish"
                                 : "Next"}
-                        </Button>
-                    </Flex>
+                        </ChakraButton>
+
+                        <ChakraButton
+                            onClick={markdownModal.onOpen}
+                            width="100%"
+                        >
+                            View generated markdown code
+                        </ChakraButton>
+
+                        <ChakraButton
+                            onClick={goToProjectTypeSelection}
+                            width="100%"
+                        >
+                            Choose project type again
+                        </ChakraButton>
+                    </Grid>
 
                     {section.footerAfterSubmitBtn}
                 </VStack>
@@ -162,23 +182,13 @@ const TemplateSetup: React.FC<ITemplateSetup> = ({ projectType }) => {
                             </AlertDescription>
                         </Alert>
                     )}
-                    <Flex
-                        columnGap={2}
-                        w="100%"
-                        alignItems="center"
-                        justifyContent="center"
-                    >
-                        {activeStep ===
-                            TemplateSectionOrders[projectType].length && (
-                            <Button onClick={prevStep} w="50%">
-                                Go back to setup
-                            </Button>
-                        )}
 
-                        <Button onClick={markdownModal.onOpen} w="50%">
-                            View generated markdown code
+                    {activeStep ===
+                        TemplateSectionOrders[projectType].length && (
+                        <Button onClick={prevStep} w="50%">
+                            Go back to setup
                         </Button>
-                    </Flex>
+                    )}
                 </Container>
 
                 <PreviewContainer markdownCode={markdown} />

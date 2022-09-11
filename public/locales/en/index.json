@@ -2,6 +2,5 @@
     "description": "Readme Generator is a website that gives you suitable and efficient templates for your README.md files.",
     "letsStart": "Let's Start!",
     "showMore": "Show More",
-    "backgroundImageBy": "Background image by",
-    "license": "license"
+    "bgDescription": "Background image by <websitelink>svgbackgounds.com</websitelink> ( <licenselink>license</licenselink> )"
 }
