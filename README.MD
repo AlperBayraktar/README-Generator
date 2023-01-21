@@ -8,7 +8,7 @@ Readme Generator is a website that gives you suitable and efficient templates fo
 
 ## Contributing
 
-Contributions are always welcome!d
+Contributions are always welcomed!
 
 See `CONTRIBUTING.md` for ways to get started.
 
